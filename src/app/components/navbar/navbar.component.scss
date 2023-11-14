@@ -1,0 +1,49 @@
+.btn-circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.fw-semibold {
+    font-family: 'Space Mono';
+}
+
+.d-flex{
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item:hover{
+    display: flex;
+    background-color: #3a3f48;
+    width: 100%;
+    border-radius: 25px;
+    justify-content: center;
+}
+.navbar {
+    border-radius: 25px;
+}
+
+.navbar-hover {
+    margin-top: 2%;
+}
+
+.navbar-toggler-icon {
+    color: white;
+    border: non;
+}
+
+@media (min-width: 992px) {
+    .mode {
+        max-width: fit-content;
+    }
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 2%;
+    }
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

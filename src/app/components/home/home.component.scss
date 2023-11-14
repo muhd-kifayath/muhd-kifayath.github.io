@@ -1,0 +1,155 @@
+.brand {
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Work Sans Extra Bold';
+    font-weight: 800;
+    font-size: 12vw;
+    letter-spacing: 0.5rem;
+    z-index: -1;
+}
+
+.me {
+    background: linear-gradient(
+        200deg,
+        rgba(217, 217, 217, 0) 57.2%,
+        rgba(35.41, 52.11, 51.66, 0.2) 77.51%,
+        rgba(16.92, 21.72, 21.58, 0.6) 100%
+      );
+    border-radius: 20%;
+    max-width: 80%;
+	margin-top: -45%;
+	position: relative;
+	width: 100vw;
+}
+
+.img-c {
+    width: 50%;
+    padding-bottom: 5%;
+}
+
+.btn {
+    font-family: 'Work Sans Medium';
+    margin-top: 5%;
+    margin-left: 8%;
+    font-size: 1.5rem;
+    background: var(--primary);
+    color: var(--text-color);
+    padding: 2vw 3vw;
+}
+.btn:hover {
+    background: whitesmoke;
+    border: 1px solid;
+}
+
+.about-text {
+    width: 50%;;
+    margin: 0 5vh;
+}
+
+.role {
+    font-size: 0.8rem;
+}
+
+@media (max-width: '767.98px') {
+
+    .me {
+        background: linear-gradient(
+            200deg,
+            rgba(217, 217, 217, 0) 57.2%,
+            rgba(35.41, 52.11, 51.66, 0.2) 77.51%,
+            rgba(16.92, 21.72, 21.58, 0.6) 100%
+          );
+        border-radius: 20%;
+        margin-top: -20%;
+        position: relative;
+    }
+
+    .about-text {
+        margin: 0;
+    }
+    .role {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: '991.98px') {
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    .me {
+        background: linear-gradient(
+            200deg,
+            rgba(217, 217, 217, 0) 57.2%,
+            rgba(35.41, 52.11, 51.66, 0.2) 77.51%,
+            rgba(16.92, 21.72, 21.58, 0.6) 100%
+          );
+        border-radius: 20%;
+        max-width: 80%;
+        margin-top: -20%;
+        margin-bottom: -40%;
+        position: relative;
+        width: 100vw;
+    }
+    
+}
+
+@media (max-width: '575.98px') {
+    .d-flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .brand {
+      display: none;
+    }
+
+    .btn {
+        margin-left: 33%;
+        padding: 1rem 2rem;
+
+    }
+
+    .me {
+        background: linear-gradient(
+            200deg,
+            rgba(217, 217, 217, 0) 57.2%,
+            rgba(35.41, 52.11, 51.66, 0.2) 77.51%,
+            rgba(16.92, 21.72, 21.58, 0.6) 100%
+          );
+        border-radius: 20%;
+        max-width: 60%;
+        margin-top: 10%;
+        margin-bottom: -40%;
+        position: relative;
+        width: 100vw;
+    }
+    .about-text {
+        margin: 0;
+        padding: 0 10%;
+        width: 100%;
+    }
+    .role {
+        font-size: 1.2rem;
+        line-height: 0;
+    }
+
+    .img-c {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .btn {
+        margin-left: 27%;
+    }
+}

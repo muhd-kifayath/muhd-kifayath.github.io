@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+// Import Bootstrap Sass variables
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans Medium';
+  src: url('assets/fonts/Work_Sans/static/WorkSans-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans Extra Bold';
+  src: url('assets/fonts/Work_Sans/static/WorkSans-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('assets/fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Mono Medium';
+  src: url('assets/fonts/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Work Sans';
+}
+
+// Light Theme
+.light-theme {
+  --primary: #30E5E8;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --dark: #121315;
+}
+
+// Dark Theme
+.dark-theme {
+  --primary: #19E2E6;
+  --background-color: #121315;
+  --text-color: #ffffff;
+}
+
