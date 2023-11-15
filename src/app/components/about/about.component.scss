@@ -1,0 +1,82 @@
+.about-title {
+    font: 7.5vw 'Work Sans Medium';
+    font-weight: 500;
+    white-space: wrap;
+    position: absolute;
+    margin-left: 39vw;
+    margin-right: 39vw;
+    width: 22vw;
+    line-height: 0.8;
+}
+
+.content {
+
+    width: 100%;
+    overflow: visible;
+
+    .mist {
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        position: absolute;
+        z-index: 1;
+        scale: 1.2;
+        margin-top: 3.5vw;
+    }
+
+    .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        padding: 5vw;
+
+        img {
+            width: 90%;
+            border-radius: 14.25%;
+            z-index: 2;
+        }
+    }
+
+    .text-container {
+        text-align: justify;
+        width: 50%;
+        padding: 10vw 8vw;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about-title {
+        position: relative;
+        width: max-content;
+        margin: auto;
+        
+    }
+    .content {
+        margin-top: 3vw;
+        flex-direction: column;
+        overflow: visible;
+
+        .mist {
+            height: 100vw !important;
+            width: 100%;
+            scale: 1;
+            margin-top: -5vw;
+        }
+
+        .img-container {
+            width: 100%;
+
+            img {
+                width: 80%;
+            }
+        }
+        .text-container {
+            padding: 2vw 8vw;
+            font-size: 4vw;
+            width: 100%;
+        }
+    }
+}
