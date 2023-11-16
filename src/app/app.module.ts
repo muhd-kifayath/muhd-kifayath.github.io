@@ -10,7 +10,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { TabsModule } from 'ngx-bootstrap/tabs'
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {MatTabsModule} from '@angular/material/tabs'; 
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs'
     AppRoutingModule,
     NgbCollapseModule,
     TabsModule.forRoot(),
+    BrowserAnimationsModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,8 +3,16 @@
     font-weight: 500;
 }
 
-:host ::ng-deep .skill-tab {
-    background-color: white;
+.skills {
+    padding: 1%;
+    box-shadow: 5px 5px 50px #00000012;
+    border-radius: 30px;
+    background-color: var(--background-color-60);
+    .skill-tab {
+        .nav-link {
+            color: black;
+        }
+    }
 }
 
 .each-skill {
@@ -30,5 +38,43 @@
             border-radius: 24px;
             background-color: var(--primary);
         }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .skill-container {
+        flex-direction: column !important;
+
+        .mat-mdc-tab-group {
+            max-width: 80% !important;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .skill-container {
+        .mat-mdc-tab-group {
+            max-width: 50%;
+        }
+        .each-skill {
+            margin-top: 5px;
+            justify-content: space-between;
+            align-items: stretch;
+
+            .text-container {
+                flex: 30%;
+            }
+            .img-container {
+                justify-content: center;
+                align-items: center;
+                flex: 20%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .skill-container .each-skill .text-container {
+        flex: 40%;
     }
 }

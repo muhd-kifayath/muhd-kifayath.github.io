@@ -1,7 +1,7 @@
-<div class="d-flex flex-row-reverse justify-content-between align-items-center w-100">
-    <tabset type="none" class="skills w-60 mx-auto my-4">
-        <tab heading="Skills" style="font-weight: 800;" [disabled]="true"></tab>
-        <tab *ngFor="let field of this.mySkills" [heading]="field.title" customClass="skill-tab">
+<div class="skill-container d-flex flex-row-reverse justify-content-between align-items-center w-100 overflow-visible" >
+    <p class="skill-title w-40 mx-auto">My Skills</p>
+    <mat-tab-group class="skills w-60 mx-auto my-4" color="#30E5E8">
+        <mat-tab *ngFor="let field of this.mySkills" [label]="field.title" class="skill-tab" style=".nav-link {color: black;}">
             <div *ngFor="let skill of field.skills" class="each-skill d-flex align-items-center">
                 <p class="text-container">{{skill.title}}</p>
                 <div class="img-container" ><img src={{skill.image}}></div>
@@ -9,6 +9,6 @@
                     <div class="progress-bar" [ngStyle]='{ width : skill.expertise }'></div>
                 </div>
             </div>
-        </tab>
-    </tabset>
+        </mat-tab>
+    </mat-tab-group>
 </div>
