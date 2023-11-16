@@ -1,0 +1,14 @@
+<div class="container">
+    <tabset>
+        <tab *ngFor="let field of this.mySkills" [heading]="field.title" class="skill-tab">
+            <div *ngFor="let skill of field.skills" class="each-skill">
+                <p>{{skill.title}}</p>
+                <img src={{skill.image}} >
+                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" [ngStyle]='{ width : skill.expertise }'></div>
+                </div>
+            </div>
+        </tab>
+
+    </tabset>
+</div>

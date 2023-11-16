@@ -8,7 +8,9 @@ import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectComponent } from './components/project/project.component';
-import { ContactComponent } from './components/contact/contact.component'
+import { ContactComponent } from './components/contact/contact.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { TabsModule } from 'ngx-bootstrap/tabs'
 
 @NgModule({
   declarations: [
@@ -17,13 +19,14 @@ import { ContactComponent } from './components/contact/contact.component'
     HomeComponent,
     AboutComponent,
     ProjectComponent,
-    ContactComponent
+    ContactComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbCollapseModule,
-    
+    TabsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
