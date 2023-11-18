@@ -1,1 +1,12 @@
-<p>project works!</p>
+<div class="project-container d-flex flex-column justify-content-center w-100 overflow-visible" >
+  <p class="title">My Projects</p>
+  <div class="project d-flex w-100" *ngFor="let project of myProjects" [ngClass]="{ 'project-l': myProjects.indexOf(project)%2 == 0, 'project-r': myProjects.indexOf(project)%2 != 0}">
+    <div class="text-container pl-4 w-50">
+      <p class="name">{{project.title}}</p>
+      <p class="description">{{project.description}}</p>
+      <p class="field">{{project.field}}</p>
+      <p class="timeline">{{project.timeline}}</p>
+    </div>
+    <div class="image-container w-50"><img src={{project.image}}></div>
+  </div>
+</div>

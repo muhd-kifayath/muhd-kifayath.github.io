@@ -42,6 +42,7 @@ $portfolio-theme: mat.define-light-theme((
 // Import Bootstrap Sass variables
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 @font-face {
   font-family: 'Work Sans';
@@ -97,6 +98,10 @@ $portfolio-theme: mat.define-light-theme((
   --text-color: #ffffff;
 }
 
+.title {
+  font: 7.5vw 'Work Sans Medium';
+  font-weight: 500;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import "./node_modules/bootstrap/scss/bootstrap";
