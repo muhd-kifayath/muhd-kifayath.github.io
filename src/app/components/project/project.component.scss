@@ -1,0 +1,53 @@
+.title {
+    margin-left: 5vw;
+}
+.project {
+    margin-bottom: 2vw;
+    .image-container {
+        justify-content: start;
+        img {
+            width: 80%;
+        }
+    }
+    .text-container {
+        align-items: end;
+        p {
+            padding: 0 5vw;
+            margin-bottom: 0px;
+            font-size: 1.5vw;
+        }
+        .name {
+            font: 5vw 'Work Sans Medium';
+        }
+        
+    }
+    
+}
+.project-l {
+    flex-direction: row-reverse;
+    .text-container {
+        align-items: start;
+    }
+    .image-container {
+        justify-content: end;
+    }
+}
+
+@media (max-width: 575.98px ) {
+    .project {
+        flex-direction: column-reverse;
+        align-items: center;
+        * {
+            width: 80% !important;
+            justify-content: center !important;
+        }
+        .text-container {
+            margin: 2vw 0;
+            align-items: center;
+            p {
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+}

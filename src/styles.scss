@@ -91,6 +91,8 @@ $portfolio-theme: mat.define-light-theme((
   --dark: #121315;
 }
 
+* { max-width: 100%;}
+
 // Dark Theme
 .dark-theme {
   --primary: #19E2E6;

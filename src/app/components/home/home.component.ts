@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  name = 'Kifayath';
+  quality = '[passionate: programmer, creative: designer]';
 }

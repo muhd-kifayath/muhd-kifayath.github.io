@@ -10,6 +10,14 @@
     }
 }
 
+.skill-container .mist {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    overflow: visible;
+}
+
 .each-skill {
     width: 100%;
     column-gap: 5%;
@@ -39,6 +47,10 @@
 @media (max-width: 575.98px) {
     .skill-container {
         flex-direction: column !important;
+
+        .mist {
+            margin-top: -10vh;;
+        }
 
         .mat-mdc-tab-group {
             max-width: 80% !important;
