@@ -12,8 +12,42 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$portfolio-primary: mat.define-palette(mat.$indigo-palette);
-$portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$primary-palette: (
+  50: #e8fcfc,
+  100: #baf6f7,
+  200: #8cf1f2,
+  300: #5eebed,
+  400: #30e5e8,
+  500: #3de7e9,
+  600: #17cccf,
+  700: #1ae2e5,
+  800: #16bfc2,
+  900: #129d9f,
+  A100: #edfdfd,
+  A200: #a7f4f5,
+  A400: #2de5e8,
+  A700: #13aaac,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  )
+);
+
+$portfolio-primary: mat.define-palette($primary-palette, 700, 300, 900);
+$portfolio-accent: mat.define-palette(mat.$teal-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $portfolio-warn: mat.define-palette(mat.$red-palette);
