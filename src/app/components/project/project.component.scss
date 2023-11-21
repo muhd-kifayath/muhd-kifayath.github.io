@@ -8,6 +8,22 @@
         img {
             width: 80%;
         }
+        .link {
+            width:40vw;
+            height: 35vw;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+        }
+        img:hover .link{
+            background-color: #0000005b;
+            visibility: visible;
+            color: white;
+            font-size: large;
+            font-weight: 600;
+        }
     }
     .text-container {
         align-items: end;
@@ -34,6 +50,10 @@
 }
 
 @media (max-width: 575.98px ) {
+    .title {
+        margin-right: auto !important;
+        margin-left: auto !important    ;
+    }
     .project {
         flex-direction: column-reverse;
         align-items: center;

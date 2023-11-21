@@ -5,7 +5,9 @@ interface Project {
   description: string,
   image: string,
   field: string,
-  timeline: string
+  timeline: string,
+  link: string,
+  media: string
 }
 
 @Component({
@@ -22,21 +24,18 @@ export class ProjectComponent{
       description: 'A Recipe Finder',
       image: this.cpath+'Tasteit.png',
       field: 'Web Design',
-      timeline: 'October 2023'
+      timeline: 'October 2023',
+      link: 'https://www.behance.net/gallery/182832315/Tasteit-Recipe-Website-Design',
+      media: 'Behance'
     },
     {
       title: 'Trakit',
       description: 'A Collaborative To Do List',
       image: this.cpath+'Trakit.png',
       field: 'Android App',
-      timeline: 'July 2023'
-    },
-    {
-      title: 'Xpense',
-      description: 'An Expense Tracker',
-      image: this.cpath+'Xpense.png',
-      field: 'App Design',
-      timeline: 'March 2023'
+      timeline: 'July 2023',
+      link: 'https://www.github.com/muhd-kifayath/trakit',
+      media: 'GitHub'
     }
   ]
 }

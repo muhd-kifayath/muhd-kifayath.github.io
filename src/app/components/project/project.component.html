@@ -7,6 +7,9 @@
       <p class="field">{{project.field}}</p>
       <p class="timeline">{{project.timeline}}</p>
     </div>
-    <div class="image-container d-flex w-50"><img src={{project.image}}></div>
+    <div class="image-container d-flex w-50">
+      <img src={{project.image}}>
+      <a href={{project.link}} class="link" target="_blank">View on {{project.media}}</a>
+    </div>
   </div>
 </div>
