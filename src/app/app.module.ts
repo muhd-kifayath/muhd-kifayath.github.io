@@ -14,6 +14,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatTabsModule} from '@angular/material/tabs'; 
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     TabsModule.forRoot(),
     BrowserAnimationsModule,
     MatTabsModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
