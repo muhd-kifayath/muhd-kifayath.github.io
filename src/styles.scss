@@ -131,7 +131,9 @@ $portfolio-theme: mat.define-light-theme((
 .dark-theme {
   --primary: #19E2E6;
   --background-color: #121315;
+  --background-color-60: rgba(18,19,21,0.6);
   --text-color: #ffffff;
+  --dark: #fefefe;
 }
 
 .title {

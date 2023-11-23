@@ -1,0 +1,26 @@
+.title {
+    font-size: 2.5vw;
+}
+
+.links {
+    font-family: 'Work Sans Medium';
+    font-size: 3.5vw;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: text-decoration 5s ease-in;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.to-top {
+    margin: 10px auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: var(--dark);
+    .bi {
+        color: var(--background-color);
+    }
+}

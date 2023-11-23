@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
@@ -6,7 +6,7 @@ import { NgxSpinnerService } from "ngx-spinner";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, OnDestroy {
   title = 'portfolio';
 
   top:any;
@@ -23,12 +23,18 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    /** spinner starts on init */
-    this.spinner.show();
+    sessionStorage.setItem('shown', true.toString());
+
+    if (sessionStorage.getItem('shown') != 'true') this.spinner.show();
 
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
     }, 3000);
+  }
+
+
+  ngOnDestroy() {
+    sessionStorage.clear();
   }
 }
