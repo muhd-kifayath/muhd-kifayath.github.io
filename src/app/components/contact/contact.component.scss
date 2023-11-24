@@ -24,3 +24,17 @@
         color: var(--background-color);
     }
 }
+
+@media (max-width: 575.98px) {
+    .title {
+        font-size: 5vw;
+    }
+    .content {
+        flex-direction: column;
+        margin-top: 10px !important;
+        padding-top: 0 !important;
+    }
+    .links {
+        text-decoration: underline;
+    }
+}

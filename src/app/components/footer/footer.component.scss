@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    height: 3vw;
+    padding: 3vw;
+    p,a {
+        font-size: 1.5vw;
+        margin-bottom: auto;
+    }
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+}

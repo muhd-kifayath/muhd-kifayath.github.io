@@ -145,4 +145,5 @@ $portfolio-theme: mat.define-light-theme((
 @import "./node_modules/bootstrap/scss/bootstrap";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "Work Sans", sans-serif; cursor: none;}
+body { margin: 0; font-family: "Work Sans", sans-serif; }
+  // cursor: none;}
