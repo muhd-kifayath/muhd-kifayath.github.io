@@ -21,7 +21,12 @@
     justify-content: center;
 }
 .navbar {
-    border-radius: 25px;
+    background: var(--background-color-60);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+
 }
 
 .navbar-hover {

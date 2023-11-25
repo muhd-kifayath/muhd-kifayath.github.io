@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   public isCollapsed = true;
+
+  isDark: boolean = false;
+
+  @Output("toggleDarkTheme") toggleDarkTheme: EventEmitter<any> = new EventEmitter();
+
+  darkToggle() {
+    this.toggleDarkTheme.emit();
+    this.isDark = !this.isDark;
+  }
 }

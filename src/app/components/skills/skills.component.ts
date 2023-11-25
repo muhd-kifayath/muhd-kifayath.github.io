@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { StyleManager } from 'src/app/shared/services/style-manager.service';
+import {Component, AfterViewInit, ViewChild, ViewChildren} from '@angular/core';
+import { MatTabGroup, MatTab } from '@angular/material/tabs';
 
 interface Skill {
   title: string,
@@ -18,6 +20,33 @@ interface Field {
 })
 export class SkillsComponent {
     cpath = '../../../assets/icons/';
+
+    selectedIndex: number = 1;
+
+    SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
+
+  // Action triggered when user swipes
+  swipe(selectedIndex: number, action = this.SWIPE_ACTION.RIGHT) {
+  console.log("swipe");
+    console.log("number",selectedIndex);
+    console.log("action",action);
+    // Out of range
+    if (this.selectedIndex < 0 || this.selectedIndex > 1 ) return;
+
+    // Swipe left, next tab
+    if (action === this.SWIPE_ACTION.LEFT) {
+      const isLast = this.selectedIndex === 1;
+      this.selectedIndex = isLast ? 0 : this.selectedIndex + 1;
+      console.log("Swipe right - INDEX: " + this.selectedIndex);
+    }
+
+    // Swipe right, previous tab
+    if (action === this.SWIPE_ACTION.RIGHT) {
+      const isFirst = this.selectedIndex === 0;
+      this.selectedIndex = isFirst ? 1 : this.selectedIndex - 1;
+      console.log("Swipe left - INDEX: " + this.selectedIndex);
+    }
+  }
 
     mySkills: Field[] = [
       {
@@ -135,5 +164,5 @@ export class SkillsComponent {
           }
         ]
       }
-    ]
+    ]  
 }

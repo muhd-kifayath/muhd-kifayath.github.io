@@ -1,5 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
+import { StyleManager } from './shared/services/style-manager.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,25 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'portfolio';
-
+  theme ='light';
   top:any;
   left:any;
   expand=false;
 
-  constructor(private spinner: NgxSpinnerService) {}
+  constructor(private spinner: NgxSpinnerService, public styleManager: StyleManager) {
+  }
+
+  toggleDarkTheme() {
+    if(this.styleManager.isDark){
+      document.documentElement.setAttribute('data-bs-theme', 'light')
+      this.styleManager.isDark = !this.styleManager.isDark;
+      
+    }
+    else {
+      document.documentElement.setAttribute('data-bs-theme', 'dark')
+      this.styleManager.isDark = !this.styleManager.isDark;
+    }
+  }
 
 
   @HostListener('document:mousemove', ['$event'])
@@ -36,5 +50,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     sessionStorage.clear();
+  }
+
+  
+}
+
+const setTheme = (theme: string) => {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-bs-theme', 'dark')
+  } else {
+    document.documentElement.setAttribute('data-bs-theme', 'light')
   }
 }

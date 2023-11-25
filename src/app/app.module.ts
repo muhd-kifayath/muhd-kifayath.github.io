@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatTabsModule} from '@angular/material/tabs'; 
 import { NgxSpinnerModule } from "ngx-spinner";
 import { FooterComponent } from './components/footer/footer.component';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,10 @@ import { FooterComponent } from './components/footer/footer.component';
     CarouselModule.forRoot(),
     NgxSpinnerModule
   ],
-  providers: [],
+  providers: [{ 
+    provide: HAMMER_GESTURE_CONFIG, 
+    useClass: HammerGestureConfig 
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
