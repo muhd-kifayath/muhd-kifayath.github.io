@@ -1,4 +1,4 @@
-<div class="container py-2">
+<div class="container py-2" style="margin-top: 72px;">
     <div class="text-wrapper brand">DEVELOPER</div>
     <div class="d-flex align-items-center">
         <div class="text-wrapper fs-2 about-text" style="font-family: 'Work Sans Medium'; ">
@@ -6,7 +6,7 @@
             <a href="../../../assets/files/resume.pdf" download="Muhammd Kifayathullah Resume" class="btn py-2 rounded-pill shadow">Resume</a>
         </div>
         <div class="text-center img-c">
-           <img src="../../../assets/images/animated.png" class="me" >
+           <img src="../../../assets/images/animated.png" [ngClass]="this.isDark ? 'me-dark' : 'me'" >
         </div>
     </div>
 </div>

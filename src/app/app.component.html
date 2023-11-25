@@ -1,9 +1,9 @@
 <!-- <div class="cursor" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div> -->
 <ngx-spinner bdColor = "#121315" size = "medium" color = "#30e5e8" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
-<app-navbar [ngClass]="this.styleManager.isDark ? 'dark-theme' : 'light-theme'" (toggleDarkTheme)="toggleDarkTheme()"></app-navbar>
-<app-home [ngClass]="this.styleManager.isDark ? 'dark-theme' : 'light-theme'"></app-home>
-<app-about [ngClass]="this.styleManager.isDark ? 'dark-theme' : 'light-theme'"></app-about>
-<app-skills [ngClass]="this.styleManager.isDark ? 'dark-theme' : 'light-theme'"></app-skills>
-<app-project [ngClass]="this.styleManager.isDark ? 'dark-theme' : 'light-theme'"></app-project>
-<app-contact [ngClass]="this.styleManager.isDark ? 'dark-theme' : 'light-theme'"></app-contact>
-<app-footer [ngClass]="this.styleManager.isDark ? 'dark-theme' : 'light-theme'"></app-footer>
+<app-navbar [ngClass]="this.isDark ? 'dark-theme' : 'light-theme'" (toggleDarkTheme)="toggleDarkTheme()" id=""></app-navbar>
+<app-home [ngClass]="this.isDark ? 'dark-theme' : 'light-theme'" id="home" [isDark]="this.isDark"></app-home>
+<app-about [ngClass]="this.isDark ? 'dark-theme' : 'light-theme'" id="about"></app-about>
+<app-skills [ngClass]="this.isDark ? 'dark-theme' : 'light-theme'" id="skills"></app-skills>
+<app-project [ngClass]="this.isDark ? 'dark-theme' : 'light-theme'" id="project"></app-project>
+<app-contact [ngClass]="this.isDark ? 'dark-theme' : 'light-theme'" id="contact"></app-contact>
+<app-footer [ngClass]="this.isDark ? 'dark-theme' : 'light-theme'"></app-footer>

@@ -50,10 +50,15 @@
     margin-bottom: 5%;
     transition: 100ms;
 }
+.link {
+    margin-right: 5vw;
+}
+
 .btn:hover {
     background-color: var(--primary);
     font-family: 'Work Sans Medium';
     color: var(--background-color);
+    border: 1px solid var(--primary);
 }
 .project-l {
     flex-direction: row-reverse;
@@ -62,6 +67,9 @@
     }
     .image-container {
         justify-content: end;
+    }
+    .link {
+        margin-left: 5vw;
     }
 }
 

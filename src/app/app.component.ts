@@ -1,6 +1,7 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
 import { StyleManager } from './shared/services/style-manager.service';
+import Headroom from 'headroom.js';
 
 @Component({
   selector: 'app-root',
@@ -13,19 +14,22 @@ export class AppComponent implements OnInit, OnDestroy {
   top:any;
   left:any;
   expand=false;
+  isDark: boolean = true;
 
   constructor(private spinner: NgxSpinnerService, public styleManager: StyleManager) {
+    document.documentElement.setAttribute('data-bs-theme', 'dark')
+
   }
 
   toggleDarkTheme() {
-    if(this.styleManager.isDark){
+    if(this.isDark){
       document.documentElement.setAttribute('data-bs-theme', 'light')
-      this.styleManager.isDark = !this.styleManager.isDark;
+      this.isDark = !this.isDark;
       
     }
     else {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
-      this.styleManager.isDark = !this.styleManager.isDark;
+      this.isDark = !this.isDark;
     }
   }
 
@@ -45,6 +49,19 @@ export class AppComponent implements OnInit, OnDestroy {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
     }, 3000);
+
+    const header = document.querySelector("header")!;
+
+    console.log(header);
+
+    var headroom = new Headroom(header, {
+      offset: 300,
+      tolerance: {
+        up: 30,
+        down: 30
+      },
+    });
+    headroom.init();
   }
 
 
