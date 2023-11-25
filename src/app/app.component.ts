@@ -52,8 +52,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
     const header = document.querySelector("header")!;
 
-    console.log(header);
-
     var headroom = new Headroom(header, {
       offset: 300,
       tolerance: {
